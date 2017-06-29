@@ -5,6 +5,8 @@
  */
 package visao;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Israel Sales
@@ -41,13 +43,13 @@ public class TelaLogin extends javax.swing.JFrame {
 
         jLabel1.setText("Usuário:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(280, 130, 50, 20);
+        jLabel1.setBounds(260, 100, 50, 30);
 
         jLabel2.setText("Senha:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(280, 160, 34, 20);
+        jLabel2.setBounds(260, 140, 50, 30);
         getContentPane().add(jTextFieldUsuario);
-        jTextFieldUsuario.setBounds(320, 130, 120, 20);
+        jTextFieldUsuario.setBounds(310, 100, 130, 30);
 
         jPasswordFieldSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,7 +57,7 @@ public class TelaLogin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jPasswordFieldSenha);
-        jPasswordFieldSenha.setBounds(320, 160, 120, 20);
+        jPasswordFieldSenha.setBounds(310, 140, 130, 30);
 
         jButtonSair.setText("Sair");
         jButtonSair.addActionListener(new java.awt.event.ActionListener() {
@@ -64,21 +66,26 @@ public class TelaLogin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonSair);
-        jButtonSair.setBounds(390, 190, 50, 20);
+        jButtonSair.setBounds(390, 180, 50, 30);
 
         jButtonAcessar.setText("Acessar");
+        jButtonAcessar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAcessarActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonAcessar);
-        jButtonAcessar.setBounds(320, 190, 70, 20);
+        jButtonAcessar.setBounds(310, 180, 80, 30);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/logo_clinica.png"))); // NOI18N
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 70, 270, 240);
+        jLabel4.setBounds(0, 40, 260, 230);
 
         jLabelBackgroundLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundotelaLogin.png"))); // NOI18N
         getContentPane().add(jLabelBackgroundLogin);
-        jLabelBackgroundLogin.setBounds(0, 0, 500, 380);
+        jLabelBackgroundLogin.setBounds(0, 0, 500, 270);
 
-        setSize(new java.awt.Dimension(516, 414));
+        setSize(new java.awt.Dimension(516, 308));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -88,7 +95,20 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void jButtonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSairActionPerformed
         // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_jButtonSairActionPerformed
+
+    private void jButtonAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAcessarActionPerformed
+        // TODO add your handling code here:
+        if (jTextFieldUsuario.getText().equals("admin") && jPasswordFieldSenha.getText().equals("1234")) {
+            TelaPrincipal telaPrincipal = new TelaPrincipal();
+            telaPrincipal.setVisible(true);
+            dispose();
+        }else{
+            JOptionPane.showMessageDialog(rootPane, "Usuário ou senha incorretos!");
+        }
+
+    }//GEN-LAST:event_jButtonAcessarActionPerformed
 
     /**
      * @param args the command line arguments
