@@ -124,7 +124,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         jInternalFrameBemVindo.getContentPane().add(jButtonFecharTelaBemVindo);
-        jButtonFecharTelaBemVindo.setBounds(980, 0, 40, 40);
+        jButtonFecharTelaBemVindo.setBounds(710, 10, 40, 40);
 
         getContentPane().add(jInternalFrameBemVindo);
         jInternalFrameBemVindo.setBounds(0, 80, 1040, 400);
