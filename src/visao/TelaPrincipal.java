@@ -189,6 +189,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItemCadastrosMedicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadastrosMedicosActionPerformed
         // TODO add your handling code here:
+        FormMedico formMedico = new FormMedico();
+        formMedico.setVisible(true);
     }//GEN-LAST:event_jMenuItemCadastrosMedicosActionPerformed
 
     private void jButtonCadastroEnfermeiraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastroEnfermeiraActionPerformed
